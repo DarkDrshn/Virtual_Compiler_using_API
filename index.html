@@ -1,0 +1,61 @@
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Compiler</title>
+</head>
+
+<body style="background-color: #eee; font-family: monospace; margin: 8px;" >
+    <h2>🔥Online Compiler🔥<sub><small> API by <a href="https://judge0.com/ce">Judge0</a></small></sub></h2>
+
+    <h4>Source Code</h4>
+    <textarea id="source" style="width: calc(50% - 8px); height: 40%; resize: vertical;">
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string name;
+    cin >> name;
+
+    cout << "Hellow " << name << "!\n";
+    cerr << "This is a dummy error message " << name << ".\n";
+    cout << "But don't worry " << name << ", Everything cannot be Fine! :)\n";
+
+    return 0;
+}
+</textarea>
+
+    <h4>Language</h4>
+    <select id="lang">
+        <option>Bash</option>
+        <option>C#</option>
+        <option selected>C++</option>
+        <option>C</option>
+        <option>Java</option>
+        <option>Python</option>
+        <option>Ruby</option>
+    </select>
+
+    <h4>Input</h4>
+    <textarea id="input" style="width: calc(50% - 8px); height: 10%; resize: vertical;">DarkHomosapien
+    </textarea>
+
+    <h4>Expected Output<sub><small>(Optional)</small></sub></h4>
+    <textarea id="expected-output" style="width: calc(50% - 8px); height: 10%; resize: vertical;"></textarea>
+
+    </br></br>
+    <button id="run" onclick="run()">▶️ Run (Ctrl + Enter)</button>
+
+    <small style="width: 50%; text-align: center; color: #ccc;">
+        Source code available on 
+        <a style="color: #bbb; font-weight: bold;" 
+        href="https://github.com/DarkDrshn/Virtual_Compiler_using_API">
+            GitHub
+        </a>.
+    </p>
+
+    <textarea readonly id="output" style="width: 50%; height: 100%; position: fixed; top: 0; right: 0; resize: none;"></textarea>
+
+    
+</body>
